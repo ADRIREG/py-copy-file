@@ -7,6 +7,9 @@ def copy_file(command: str) -> None:
 
     source_filename, target_filename = parts[1], parts[2]
 
+    if source_filename == target_filename:
+        pass
+
     try:
         with open(source_filename, "r") as source_file:
             content = source_file.read()
